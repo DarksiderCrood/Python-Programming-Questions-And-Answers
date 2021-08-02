@@ -1,5 +1,6 @@
 # Methode 1
-inputStr = 'dictionarycomprehensioninPython'
+print("\nMethode 1")
+inputStr = 'qweertrty'
 
 result =[0]*26
 
@@ -13,7 +14,8 @@ for i in inputStr:
         tempstr.remove(i)
 
 # Methode 2
-str = 'dictionary comprehension in Python'
+print("\nMethode 2")
+str = 'qweertrty'
 count_with_dic = {}
 for ch in str:
     if ch == ' ':
@@ -26,8 +28,9 @@ for k, v in count_with_dic.items():
     print('{} = {}'.format(k,v))
 
 # Methode 3
+print("\nMethode 3")
 from collections import Counter
-str1 = 'dictionary comprehension in Python'
+str1 = 'qweertrty'
 str = Counter(str1)
 for k, v in str.items():
     if k == ' ':
