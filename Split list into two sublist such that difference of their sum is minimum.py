@@ -1,4 +1,5 @@
 # Methode 1 (Not Comepleted)
+# Note: Just checking difference against one element with others
 inp_list = [4, 3, 5, 6]
 
 lenght = len(inp_list)
