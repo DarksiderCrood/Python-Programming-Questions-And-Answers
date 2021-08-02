@@ -18,7 +18,7 @@ Sample Input :
 Sample Output :
     110
 '''
-# Methode 1
+# Method 1
 def thief_loot(money_list):
     secondary_list = []
     largest = None

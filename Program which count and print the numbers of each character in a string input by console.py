@@ -1,4 +1,4 @@
-# Methode 1
+# Method 1
 print("\nMethode 1")
 inputStr = 'qweertrty'
 
@@ -13,7 +13,7 @@ for i in inputStr:
         print(i+" : "+ str(ans))
         tempstr.remove(i)
 
-# Methode 2
+# Method 2
 print("\nMethode 2")
 str = 'qweertrty'
 count_with_dic = {}
