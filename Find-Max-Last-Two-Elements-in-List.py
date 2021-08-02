@@ -1,14 +1,20 @@
-data = [1,2,8,3,12]
+def max2(lst):
+    largest = None
+    sec_largest = []
+    for x in lst:
+        if not largest or x > largest:
+            largest = x
+    lst.remove(largest)
+    sec_largest =  lst
+    return largest, sec_largest
 
-largest = None
-second_largest = None
 
-for a in data:
-    if not largest or a > largest:
-        if largest:
-            second_largest = largest
-        largest = a
+inp = '98 23 45 67 89 12 1'
+l = inp.split(' ')
+l2 = []
+for x in l:
+    l2.append(int(x))
 
-print("largest: {}".format(largest))
-print("second_largest: {}".format(second_largest))
-# printklkdvf
+r1, r2 = max2(l2)
+r3, r4 = max2(r2)
+print(r1,r3)
