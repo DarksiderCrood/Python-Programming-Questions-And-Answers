@@ -19,4 +19,3 @@ for ele in inp_list:
     else:
         l2.append(sum2-sum1)
 print(min(l2))
-
