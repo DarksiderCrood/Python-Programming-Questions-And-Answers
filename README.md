@@ -18,3 +18,4 @@
 * Swap two variable values.
 * Three ways generate random number between 0–100.
 * Update tuples.
+* Many more are here to explore.....
