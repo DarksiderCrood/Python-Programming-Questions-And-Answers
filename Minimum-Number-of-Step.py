@@ -17,7 +17,7 @@ Explanation of Sample Output 1 :
     Step 2 : n = 2 / 2  =  1
 '''
 
-
+# Method 1
 def minimum_steps(num):
     if num == 1:
         return 0
@@ -28,7 +28,7 @@ def minimum_steps(num):
         step = step + 1
         if  num % 2 == 0:
             num = num / 2
-        elif num % 3 == 0:
+        if num % 3 == 0:
             num = num /3
         else:
             num = num -1
@@ -38,3 +38,18 @@ if __name__ == '__main__':
     num = int(input("\nEnter Positive Integer: "))
     result = minimum_steps(num)
     print("Minimum Steps: {}\n".format(result))
+
+
+# Method 2
+def countMinStepsToOne(n) :
+	if n == 1:
+		return 0
+	a = 100000
+	b = 100000
+	c = 100000
+	a = countMinStepsToOne(n-1)
+	if n%2==0:
+		b = countMinStepsToOne(n/2)
+	if n%3==0:
+		c = countMinStepsToOne(n/3)
+	return 1+ min(a,b,c)
