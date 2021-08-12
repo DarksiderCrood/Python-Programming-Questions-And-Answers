@@ -51,4 +51,28 @@ Sample Output 2:
     -3 3
     -2 2
 '''
+from itertools import combinations
 
+def pairSum(arr, s):
+    subs = []
+
+    for i in range(0, len(arr) + 1):
+        temp = [list(x) for x in combinations(arr, i)]
+        if len(temp)>0:
+            subs.extend(temp)
+    for x in subs:
+        if len(x) == 1:
+            continue
+        if len(x) == 0:
+            continue
+        if sum(x) == int(s):
+                print(x)
+    return subs
+
+
+if __name__ == '__main__':
+    ns = list(''.join(input()).split(' '))
+    l = list(''.join(input()).split(' '))
+    lst = [int(x) for x in l]
+    result = pairSum(lst,ns[1])
+    #print(result)

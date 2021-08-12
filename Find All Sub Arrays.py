@@ -1,11 +1,11 @@
-def sub_lists(arr): 
-    sub_list = [[]]  # Store all the sublists 
+from itertools import combinations
+def sub_lists(my_list):
+	subs = []
+	for i in range(0, len(my_list)+1):
+	  temp = [list(x) for x in combinations(my_list, i)]
+	  if len(temp)>0:
+	    subs.extend(temp)
+	return subs
 
-    for i in range(len(arr) + 1):        
-        for j in range(i + 1, len(arr) + 1): 
-            sub = arr[i:j] 
-            sub_list.append(sub)  
-    return sub_list 
-  
-arr = [4,5,8,4,8,5,2,58,486] 
+arr = [1,2,3,4,5] 
 print(sub_lists(arr))
