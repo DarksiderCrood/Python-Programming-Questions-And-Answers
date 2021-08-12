@@ -68,14 +68,13 @@ def pairSum(arr, s):
         if len(x) > 2:
             continue
         if sum(x) == int(s):
-                print(*x)
+            #print(' '.join(map(str, x)))
+            print(*x)
 
 
 if __name__ == '__main__':
-    ns = [5,5]
-    l = [1,2,3,4,5]
-    #ns = list(''.join(input()).split(' '))
-    #l = list(''.join(input()).split(' '))
+    ns = list(''.join(input()).split(' '))
+    l = list(''.join(input()).split(' '))
     lst = [int(x) for x in l]
     result = pairSum(lst,ns[1])
     #print(result)
