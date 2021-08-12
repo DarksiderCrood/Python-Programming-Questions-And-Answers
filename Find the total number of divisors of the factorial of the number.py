@@ -41,7 +41,7 @@ for n in l:
         print("fact for 0 is 1")
     else:
         for x in range(1, n+1):
-            s=(s*x)%e
+            s=(s*x)
     #print("fact of num:",s)
     for x in range(1, s+1):
         if not s%x:
