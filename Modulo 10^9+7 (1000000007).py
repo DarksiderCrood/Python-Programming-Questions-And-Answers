@@ -7,5 +7,5 @@ def factorial(n) :
 
 	return fz
 
-result = factorial(1020000)
+result = factorial(56)
 print(result)

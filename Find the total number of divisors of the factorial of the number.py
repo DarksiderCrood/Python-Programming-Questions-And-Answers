@@ -32,6 +32,7 @@ for x in range(0,t):
     l.append(i)
 
 for n in l:
+    e = 1000000007
     s=1
     c=0
     if n < 0:
@@ -40,7 +41,7 @@ for n in l:
         print("fact for 0 is 1")
     else:
         for x in range(1, n+1):
-            s=s*x
+            s=(s*x)%e
     #print("fact of num:",s)
     for x in range(1, s+1):
         if not s%x:
