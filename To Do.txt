@@ -1,1 +1,3 @@
 Element-n-divide-by-k
+Complete all Questions
+https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/
