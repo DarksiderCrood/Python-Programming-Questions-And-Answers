@@ -61,7 +61,7 @@ list1[index] = 200
 print(list1)'''
 
 # Exercise 10: Given a Python list, remove all occurrence of 20 from the list
-list1 = [5, 20, 15, 20, 25, 50, 20]
+'''list1 = [5, 20, 15, 20, 25, 50, 20]
 list2 = [x for x in list1 if x!=20]
-print(list2)
+print(list2)'''
 
