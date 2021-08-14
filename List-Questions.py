@@ -47,6 +47,21 @@ list1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l"], "m", "n"]
 list1[2][1][2].extend(sub_list)
 print(list1)'''
 
+# Exercise 9: Given a Python list, find value 20 in the list, and if it is present, replace it with 200. Only update the first occurrence of a value
+'''list1 = [5, 20, 15, 20, 25, 50, 40,20]
+count = 0
+for x in range(0, len(list1)):
+    if count<1 and list1[x]==20:
+        count+=1
+        list1[x]=200
+print(list1)
 
+index = list1.index(20)
+list1[index] = 200
+print(list1)'''
 
+# Exercise 10: Given a Python list, remove all occurrence of 20 from the list
+list1 = [5, 20, 15, 20, 25, 50, 20]
+list2 = [x for x in list1 if x!=20]
+print(list2)
 
