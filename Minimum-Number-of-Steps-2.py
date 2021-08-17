@@ -11,5 +11,5 @@ def countMinStepsToOne(n) :
 		c = countMinStepsToOne(n/3)
 	return 1+ min(a,b,c)
 
-result = countMinStepsToOne(99)
+result = countMinStepsToOne(894)
 print(result)
