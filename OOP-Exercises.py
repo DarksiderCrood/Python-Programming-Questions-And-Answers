@@ -46,3 +46,4 @@ class Bus(Vehicle):
 
 School_bus = Bus("Volvo", 250, 40)
 print(School_bus.seating_capacity())
+
