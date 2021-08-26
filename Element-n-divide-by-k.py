@@ -10,7 +10,7 @@ There are two elements that appear more than two times, 2 and 3.
 from collections import Counter
 
 
-arr = [3, 1, 4, 2, 2, 1, 2, 3, 3, 4, 4]
+arr = [3, 1, 4, 2, 2, 1, 2, 3, 3, 4, 4,2]
 n = len(arr)
 k = 4
 div = n/k
