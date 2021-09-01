@@ -58,10 +58,10 @@ def is_perfect_cube(numbers):
             
 
 if __name__ == '__main__':
-    # num_of_tests = int(input())
-    # tests_list = []
-    # for test in range(num_of_tests):
-    #     num = int(input())
-    #     tests_list.append(num)
-    tests_list = [25,26,27,28,29]
+    num_of_tests = int(input())
+    tests_list = []
+    for test in range(num_of_tests):
+        num = int(input())
+        tests_list.append(num)
+    # tests_list = [25,26,27,28,29]
     is_perfect_cube(tests_list)   
