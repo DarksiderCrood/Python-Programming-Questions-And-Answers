@@ -42,12 +42,13 @@ Case 9: 8
 Case 10: 9
 '''
 
-def is_perfect_cube(number) -> bool:
+def is_perfect_cube(number):
     """
     Indicates (with True/False) if the provided number is a perfect cube.
     """
-    number = abs(number)  # Prevents errors due to negative numbers
-    return round(number ** (1 / 3)) ** 3 == number
+    number = abs(number) 
+    l = round(number ** (1 / 3))
+    return l
 
-result = is_perfect_cube(8)
+result = is_perfect_cube(27)
 print(result)
