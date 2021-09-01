@@ -1,3 +1,10 @@
+'''
+Given a string, reduce it in Such a way that all Of its
+substrings are distinct. To do so, you may delete
+any characters at any index, What is the minimum
+number of deletions needed?
+'''
+
 from collections import Counter
 
 def test_dist(lsts):
@@ -24,7 +31,7 @@ def test_sub(l):
     else:
         return False
 
-        
+
 lst = 'abab'
 result = test_dist(lst)
 count = 0
