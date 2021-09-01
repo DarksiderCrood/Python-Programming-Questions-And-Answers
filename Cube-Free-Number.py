@@ -42,13 +42,26 @@ Case 9: 8
 Case 10: 9
 '''
 
-def is_perfect_cube(number):
-    """
-    Indicates (with True/False) if the provided number is a perfect cube.
-    """
-    number = abs(number) 
-    l = round(number ** (1 / 3))
-    return l
 
-result = is_perfect_cube(27)
-print(result)
+def is_perfect_cube(numbers):
+    count = 0
+    position = 0
+    for number in numbers:
+        count+=1
+        number = abs(number) 
+        l = round(number ** (1 / 3)) ** 3
+        if l != number or l == 1:
+            print("Case {}: {}".format(count, number-position))
+        else:
+            position+=1
+            print("Case {}: Not Cube Free".format(count))
+            
+
+if __name__ == '__main__':
+    # num_of_tests = int(input())
+    # tests_list = []
+    # for test in range(num_of_tests):
+    #     num = int(input())
+    #     tests_list.append(num)
+    tests_list = [25,26,27,28,29]
+    is_perfect_cube(tests_list)   
