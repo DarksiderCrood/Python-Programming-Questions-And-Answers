@@ -51,3 +51,22 @@ Sample Output 2 :
     true
 '''
 
+def check(final,n):
+    if(n==1):
+        return "false"
+    for i in range(1,n):
+        if(final[i][0]<final[i-1][1]):
+            return "true"
+    return "false"
+
+t = int(input())
+for _ in range(0,t):
+    n = int(input())
+    range1 = list(map(int,input().split()))
+    range2 = list(map(int,input().split()))
+    final = []
+    for i in range(0,n):
+        final.append((range1[i],range2[i]))
+    final.sort()
+    ans = check(final,n)
+    print(ans)

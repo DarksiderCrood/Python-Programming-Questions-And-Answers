@@ -1,6 +1,5 @@
 Element-n-divide-by-k
 Overlapping_Function_Intervals
-Cube-Free-Number
 The Hurdle Race
 How many different ways you can achieve a weight of d units using only the given weights
 
