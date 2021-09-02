@@ -42,8 +42,8 @@ Case 9: 8
 Case 10: 9
 '''
 
-
-def is_perfect_cube(numbers):
+# Code with Basic Knowledge
+'''def is_perfect_cube(numbers):
     count = 0
     position = 0
     for number in numbers:
@@ -64,4 +64,9 @@ if __name__ == '__main__':
         num = int(input())
         tests_list.append(num)
     # tests_list = [25,26,27,28,29]
-    is_perfect_cube(tests_list)   
+    is_perfect_cube(tests_list)  '''
+
+
+# Correct Implementation
+b = []
+a = []
