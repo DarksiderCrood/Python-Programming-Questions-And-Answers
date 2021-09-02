@@ -89,7 +89,7 @@ def CheckCubeFreeNo():
             a[i] = previous+1
             previous = a[i]
             
-if __name__ == '_main_':
+if __name__ == '__main__':
     t = int(input())
     CheckCubeFreeNo()
     for i in range(0,t):
