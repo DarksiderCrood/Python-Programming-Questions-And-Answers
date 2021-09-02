@@ -12,3 +12,12 @@ if __name__ == '__main__':
     hight = int(num_hudles[2])
     hudles_hights = str(input())
     jump_hudle(hudles_hights, hight)
+
+# Another Way
+def hurdleRace(k, height):
+    max_height = max(height)
+    if k > max_height:
+        return 0
+    
+    else:
+        return abs(k - max_height)
