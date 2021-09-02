@@ -68,5 +68,33 @@ if __name__ == '__main__':
 
 
 # Correct Implementation
-b = []
-a = []
+size = 1000001
+a = [1]*size
+def CheckCubeFreeNo():
+    a[0]=0
+    
+    for i in range(2,size):
+        if(a[i]==1):
+            if(i<=100):
+                a[i*i*i]=0
+        elif(a[i]==0):
+            j = i*2
+            while(j<size):
+                a[j]=-1
+                j=j+i
+    a[1] = 1
+    previous = a[1]
+    for i in range(2,size):
+        if(a[i]==1):
+            a[i] = previous+1
+            previous = a[i]
+            
+if __name__ == '_main_':
+    t = int(input())
+    CheckCubeFreeNo()
+    for i in range(0,t):
+        n = int(input())
+        if(a[n]>=1):
+            print("Case "+str(i+1)+": "+str(a[n]))
+        else:
+            print("Case "+str(i+1)+": Not Cube Free")
