@@ -51,22 +51,80 @@ Sample Output 2 :
     true
 '''
 
-def check(final,n):
-    if(n==1):
-        return "false"
-    for i in range(1,n):
-        if(final[i][0]<final[i-1][1]):
-            return "true"
-    return "false"
+# Method 1
+# def check(final,n):
+#     if(n==1):
+#         return "false"
+#     for i in range(1,n):
+#         if(final[i][0]<final[i-1][1]):
+#             return "true"
+#     return "false"
 
-t = int(input())
-for _ in range(0,t):
-    n = int(input())
-    range1 = list(map(int,input().split()))
-    range2 = list(map(int,input().split()))
-    final = []
-    for i in range(0,n):
-        final.append((range1[i],range2[i]))
-    final.sort()
-    ans = check(final,n)
-    print(ans)
+
+# if __name__ == '__main__':
+#     t = int(input())
+#     for _ in range(0,t):
+#         n = int(input())
+#         range1 = list(map(int,input().split()))
+#         range2 = list(map(int,input().split()))
+#         final = []
+#         for i in range(0,n):
+#             final.append((range1[i],range2[i]))
+#         final.sort()
+#         ans = check(final,n)
+#         print(ans)
+
+
+# Method 2
+'''   
+    Time Complexity = O(N ^ 2)
+    Space Complexity = O(1)
+    
+    where N is the number of intervals given
+'''
+
+
+from sys import stdin,setrecursionlimit
+setrecursionlimit(10**7) # Used to set the maximum depth of the Python interpreter stack to the required limit. 
+                         # This limit prevents any program from getting into infinite recursion, 
+                         # Otherwise infinite recursion will lead to overflow of the C stack and crash the Python.
+
+
+# If end of on internval is less than equal to starting of other internval then there is no overlap.
+def sureForOverlap( start1, end1, start2, end2) :
+    if (end1 <= start2 or end2 <= start1) :
+        return False
+    return True
+
+
+# Check all posible combinations.
+def checkForOverlappingIntervals(start, end, inp) :
+    for i in range(inp) :
+        for j in range(i + 1, inp) :
+            if(sureForOverlap(start[i], end[i], start[j], end[j])) :
+                return True
+    return False
+
+
+
+# Taking input using Fast I/O for competitive programming
+def getInput() :
+    inp =  int(input().strip())
+    if (inp == 0 ) : 
+        temp = input()
+        temp = input()
+        return list(), list(), inp    
+    start = list(map(int, stdin.readline().strip().split(" ")))
+    end = list(map(int, stdin.readline().strip().split(" ")))
+    return start, end, inp
+
+
+# Drive functions
+if __name__ == '__main__':
+    inpt = int(input().strip())
+    for i in range(inpt) :
+        start, end, n = getInput()
+        if(checkForOverlappingIntervals(start, end, n)) :
+            print("True")
+        else :
+            print("False")
