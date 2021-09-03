@@ -39,7 +39,7 @@ import math
 prime_nums = []
 
 
-def distinct():
+def distinct_factors():
 	n = 10000
 	new_val = int((n - 2) / 2)
 	checked_val = [False] * (new_val + 1)
@@ -55,7 +55,7 @@ def distinct():
 
 
 def N_Factorful(a, b, n):
-	distinct()
+	distinct_factors()
 	result = 0
 	for i in range(a, b + 1):
 		tmp = math.sqrt(i)
