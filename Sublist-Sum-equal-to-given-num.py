@@ -64,7 +64,5 @@ if __name__ == '__main__':
     result = sub_lists(l, n)
     
     for sub in result:
-        if len(sub)<2:
-            continue
-        elif sum(sub) == n:
+        if len(sub) == 2 and sum(sub) == n:
             print(sub)
