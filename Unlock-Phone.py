@@ -11,7 +11,18 @@ Find the total number of valid unlock patterns of length N, where 1 <= N <= 9
 
 
 Test cases:
- 4 - 1 - 3 - 6     : invalid move
+4 - 1 - 3 - 6     : invalid move
 4 - 1 - 9 - 2      : invalid move
 2 - 4 - 1 - 3 - 6  : valid move
 '''
+
+def validPattern():
+    sample_data = [1,2,3,
+                   4,5,6,
+                   7,8,9]
+
+
+
+if __name__ == '__main__':
+    inp = int(input())
+    print(inp)
