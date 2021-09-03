@@ -46,11 +46,25 @@ Sample Output 2:
 -3 3
 -2 2
 '''
+from itertools import combinations
 
-l = [1,2,3]
-s = []
-for x in range(len(l)+1):
-    for y in range(x+1,len(l)+1):
-        r = l[x:y]
-        s.append(r)
-print(s)
+
+def sub_lists(my_list, s):
+	subs = []
+	for i in range(0, len(my_list)+1):
+	  temp = [list(x) for x in combinations(my_list, i)]
+	  if len(temp)>0:
+	    subs.extend(temp)
+	return subs
+
+
+if __name__ == '__main__':
+    l = [2, -3, 3, 3, -2]
+    n = 0
+    result = sub_lists(l, n)
+    
+    for sub in result:
+        if len(sub)<2:
+            continue
+        elif sum(sub) == n:
+            print(sub)
