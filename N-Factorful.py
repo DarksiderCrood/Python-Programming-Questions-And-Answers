@@ -32,3 +32,51 @@ Sample Output
 8
 1
 '''
+
+import math
+
+
+prime_nums = []
+
+
+def distinct():
+	n = 10000
+	new_val = int((n - 2) / 2)
+	checked_val = [False] * (new_val + 1)
+	for i in range(1, new_val + 1):
+		j = i
+		while ((i + j + 2 * i * j) <= new_val):
+			checked_val[i + j + 2 * i * j] = True
+			j += 1
+	prime_nums.append(2)
+	for i in range(1, new_val + 1):
+		if (checked_val[i] == False):
+			prime_nums.append(2 * i + 1)
+
+
+def N_Factorful(a, b, n):
+	distinct()
+	result = 0
+	for i in range(a, b + 1):
+		tmp = math.sqrt(i)
+		copy = i
+		count = 0
+		j = 0
+		while (prime_nums[j] <= tmp):
+			if (copy % prime_nums[j] == 0):
+				count += 1
+				while (copy % prime_nums[j] == 0):
+					copy = (copy // prime_nums[j])
+			j += 1
+		if (copy != 1):
+			count += 1
+		if (count == n):
+			result += 1
+	return result
+
+
+if __name__ == '__main__':
+    a = 1
+    b = 100
+    n = 3
+    print(N_Factorful(a, b, n))
