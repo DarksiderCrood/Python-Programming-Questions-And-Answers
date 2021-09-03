@@ -65,3 +65,32 @@ print(list1)'''
 list2 = [x for x in list1 if x!=20]
 print(list2)'''
 
+# 1. Write a python program to find the sum of all numbers in a list
+'''l = [1,2,3,4,5,6,7,8,9,10]
+print(sum(l))
+# or
+sums = 0
+for x in l:
+    sums+=x
+print(sums)'''
+
+# 2. Write a python program to find largest number in a given list with out using max()
+l = [3,6,1,3,8,9,3,4,5,6,9,1,3,5]
+print(max(l))
+# 3. Write a python program to find the common numbers from two lists
+
+# 4. Write a python program to print all even numbers from a given list
+
+# 5. Write a python program to create a list of even numbers and another list of odd numbers from a given list
+
+# 6. Write a python program to remove repeated elements from a given list without using built-in methods
+
+# 7. Write a python program to find the longest word in a given sentence
+
+# 8. Write a python program to find number of occurrences of given number with out using built-in methods
+
+# 9. ["www.zframez.com", "www.wikipedia.org", "www.asp.net", "www.abcd.in"]
+
+# Write a python program to print website suffixes (com , org , net ,in) from this list
+
+# 10. Write a python program to sort a given list of numbers with out using sort() function
