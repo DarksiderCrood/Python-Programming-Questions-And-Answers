@@ -80,3 +80,46 @@ if __name__ == '__main__':
     b = 100
     n = 3
     print(N_Factorful(a, b, n))
+
+
+# or
+
+n = 1000000
+prime= [1]*(n+1)
+ans = [0]*(n+1)
+def compute():
+    prime[0]=0;
+    prime[1]=0;
+    i = 2
+    while(i*i<=n):
+        if(prime[i]==1):
+            j = i*i
+            while(j<=n):
+                prime[j]=0
+                j=j+i
+        i+=1
+    i=2
+    while(i<=n):
+        if(prime[i]==1):
+            ans[i]+=1
+            j = i*2
+            while(j<=n):
+                ans[j]+=1
+                j=j+i
+        i+=1
+
+#main
+t = int(input())
+compute()
+for _ in range(0,t):
+    inp = list(map(int,input().split()))
+    a = inp[0]
+    b = inp[1]
+    n = inp[2]
+    count=0
+    i=a
+    while(i<=b):
+        if(ans[i]==n):
+            count+=1
+        i+=1
+    print(count)

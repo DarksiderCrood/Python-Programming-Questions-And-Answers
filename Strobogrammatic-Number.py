@@ -1,28 +1,28 @@
 
-def strobogrammatic_num(n):
+def LoopOver(n):
       
-    result = numdef(n, n)
-    return result
+    temp = Strobo_Num(n, n)
+    return temp
       
-# definition function
-def numdef(n, length):
+
+def Strobo_Num(n, length):
       
     if n == 0: return [""]
     if n == 1: return ["1", "0", "8"]
       
-    middles = numdef(n - 2, length)
-    result = []
+    middles = Strobo_Num(n - 2, length)
+    temp = []
       
     for middle in middles:
         if n != length:            
-            result.append("0" + middle + "0")
+            temp.append("0" + middle + "0")
   
-        result.append("8" + middle + "8")
-        result.append("1" + middle + "1")
-        result.append("9" + middle + "6")
-        result.append("6" + middle + "9")
-    return result
+        temp.append("8" + middle + "8")
+        temp.append("1" + middle + "1")
+        temp.append("9" + middle + "6")
+        temp.append("6" + middle + "9")
+    return temp
   
 
 if __name__ == '__main__':
-    print(strobogrammatic_num(4))
+    print(LoopOver(4))
