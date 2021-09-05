@@ -1,6 +1,6 @@
 How many different ways you can achieve a weight of d units using only the given weights
 Unlock-Phone
-Jumping-Numbers.py
+Strobogrammatic Number 
 
 Complete all Questions
 https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/

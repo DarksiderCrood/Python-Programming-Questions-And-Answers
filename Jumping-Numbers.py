@@ -160,3 +160,23 @@ class JumpingNum :
 if __name__ == "__main__":
     task = JumpingNum()
     task.JumpingNumCheck(4343456)
+
+
+# or
+def sol(n):
+    y = [1,2,3,4,5,6,7,8,9]
+    for j in range(10,n+1):
+        z = True
+        x = str(j)
+        for i in range(len(x)-1):
+            if int(x[i+1]) - int(x[i]) != 1 and int(x[i+1]) - int(x[i]) != -1 :
+                z = False
+                break
+        if z is True:
+            y.append(j)
+    return y
+
+
+if __name__ == "__main__":
+    n = int(input("\nRange:"))
+    print(sol(n))
