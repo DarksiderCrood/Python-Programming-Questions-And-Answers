@@ -1,26 +1,23 @@
 
-def LoopOver(n):
-      
+def LoopOver(n):    
     temp = Strobo_Num(n, n)
     return temp
       
 
-def Strobo_Num(n, length):
-      
+def Strobo_Num(n, lent):
     if n == 0: return [""]
     if n == 1: return ["1", "0", "8"]
       
-    middles = Strobo_Num(n - 2, length)
+    digits = Strobo_Num(n - 2, lent)
     temp = []
       
-    for middle in middles:
-        if n != length:            
-            temp.append("0" + middle + "0")
-  
-        temp.append("8" + middle + "8")
-        temp.append("1" + middle + "1")
-        temp.append("9" + middle + "6")
-        temp.append("6" + middle + "9")
+    for digit in digits:
+        if n != lent:            
+            temp.append("0" + digit + "0")
+        temp.append("8" + digit + "8")
+        temp.append("1" + digit + "1")
+        temp.append("9" + digit + "6")
+        temp.append("6" + digit + "9")
     return temp
   
 
