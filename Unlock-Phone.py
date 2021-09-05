@@ -15,7 +15,9 @@ Test cases:
 4 - 1 - 9 - 2      : invalid move
 2 - 4 - 1 - 3 - 6  : valid move
 '''
+# Ref: https://medium.com/@rebeccahezhang/leetcode-351-android-unlock-patterns-d9bae4a8a958
 
+# Thanks medium.com for the answer
 def validPattern():
     sample_data = [1,2,3,
                    4,5,6,
