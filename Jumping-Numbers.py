@@ -22,6 +22,31 @@ i.e. numbers can be printed in any order'''
 
 num = 20
 
-for x in range(1, 20+1):
-    n_str = str(x)
+n_str = []
+jumping_nums = []
+original_nums = [x for x in range(0,20+1)]
+more_digits_nums = []
+
+for x in range(0, 20+1):
+    n_str.append(''.join(sorted(str(x), reverse=False)))
     
+for y in n_str:
+    if len(y) == 1:
+        jumping_nums.append(True)
+    else:
+        jumping_nums.append(y)
+
+for z in jumping_nums:
+    if z:
+        continue
+    else:
+        for f in range(0,len(z)):
+            try:
+                if int(z[f])+1 == int(z[f+1]) or int(z[f]) == int(z[f+1]):
+                    jumping_nums.append(True)
+            except:
+                continue
+
+print(original_nums)
+print(jumping_nums)
+
