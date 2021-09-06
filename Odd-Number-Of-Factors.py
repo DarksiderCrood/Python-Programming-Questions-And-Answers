@@ -36,17 +36,13 @@ Explanation:
 class Solution:
     def count (self, N):
         count = 0
-        fact = []
         for x in range(1, N+1):
             a = []
             for y in range(1, x+1): 
                 if x%y==0:
                     a.append(y)
-            fact.append(a)
-        print(fact)
-        for x in fact:
-            if len(x)%2!=0:
-                count+=1   
+            if len(a)%2!=0:
+                count+=1  
         return count
 
 
