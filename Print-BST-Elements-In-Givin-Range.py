@@ -40,3 +40,20 @@ Constraints:
     1 ≤ Number of nodes ≤ 104
     1 ≤ l ≤ h ≤ 105
 '''
+
+
+class Solution:
+    def sumofproduct(self, n):
+        add = 0
+        for x in range(1, n+1):
+            add += x*(n//x)
+        return add
+
+
+if __name__ == '__main__':
+    T = int(input())
+    for i in range(T):
+        n = int(input())
+        ob = Solution()
+        ans = ob.sumofproduct(n)
+        print(ans)
