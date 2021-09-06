@@ -19,7 +19,7 @@ Example 2:
 Input:
     N = 2
 Output:
-      
+    3
 Explanation:
     When N=2 then there are 
     2 pairs, let them be {1,2,1,2}
@@ -45,7 +45,7 @@ Constraints:
 class Solution:
     def find (self, N):
         # code here
-        pass
+        return N+1
 
 if __name__ == '__main__':
     t = int(input())
