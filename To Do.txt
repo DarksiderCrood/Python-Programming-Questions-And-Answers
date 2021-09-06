@@ -1,6 +1,7 @@
 How many different ways you can achieve a weight of d units using only the given weights
 Unlock-Phone
 Print-BST-Elements-In-Givin-Range.py
+Odd-Number-Of-Factors
 
 Complete all Questions
 https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/
