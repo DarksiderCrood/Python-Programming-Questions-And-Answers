@@ -28,15 +28,19 @@ Expected Auxiliary Space: O(1)
 Constraints:
 1 <= N <= 109
 '''
+## Solution
+# Take the length of the string value of what you're checking
+# Trim off trailing zeros from a copy of the string
+# Take the length again, of the trimmed string
+# Subtract the new length from the old length to get the number of zeroes trailing.
+
+
 class Solution:
     def trailingZeroes(self, N):
         y=1
-        c=0
         for x in range(1, N+1):
             y*=x
-        for z in str(y):
-            pass
-        return c
+        return len(str(y)) - len(str(y).rstrip('0'))
 
 
 if __name__ == '__main__':
