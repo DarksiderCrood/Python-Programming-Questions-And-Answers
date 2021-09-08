@@ -29,11 +29,33 @@ Constraints:
 1 ≤ A[i] ≤ 106
 '''
 
+# Not Optimized One
+'''class Solution:
+    def MissingNumber(self,array,n):
+        for x in range(1, n+1):
+            if x in array:
+                continue
+            else:
+                return x
 
+
+if __name__ == '__main__':
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        a = list(map(int, input().split()))
+        s = Solution().MissingNumber(a, n)
+        print(s)'''
+
+
+# Optimized One
 class Solution:
     def MissingNumber(self,array,n):
-        # code here
-        pass
+        for x in range(1, n+1):
+            if x in array:
+                continue
+            else:
+                return x
 
 
 if __name__ == '__main__':
