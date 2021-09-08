@@ -30,7 +30,10 @@ Constraints:
 '''
 class Solution:
     def trailingZeroes(self, N):
-    	pass
+        y=1
+        for x in range(1, N+1):
+            y*=x
+        return str(y).count(0)
 
 
 if __name__ == '__main__':
