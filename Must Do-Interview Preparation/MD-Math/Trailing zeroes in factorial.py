@@ -37,10 +37,9 @@ Constraints:
 
 class Solution:
     def trailingZeroes(self, N):
-        y=1
-        for x in range(1, N+1):
-            y*=x
-        return len(str(y)) - len(str(y).rstrip('0'))
+        if not N:
+            return 0
+        return N//5+self.trailingZeroes(N//5)
 
 
 if __name__ == '__main__':
