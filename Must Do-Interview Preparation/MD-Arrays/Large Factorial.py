@@ -41,7 +41,8 @@ Constraints:
 0 <= A[i] <= 105
 '''
 
-class Solution:
+# Non Optimized Code
+'''class Solution:
     def factorial(self,a, n):
         l = []
         for x in a:
@@ -52,7 +53,20 @@ class Solution:
                 for y in range(1,x+1):
                     s*=y
                 l.append(s)
-        return l
+        return l'''
+
+
+# Optimized Code
+class Solution:
+    def factorial(self,a, n):
+        check_max=max(a)
+        rslt=[]
+        factorial=[1]*(check_max+1)
+        for x in range(1,check_max+1):
+            factorial[x]=(x*factorial[x-1])%1000000007
+        for y in a:
+            rslt.append(factorial[y])
+        return rslt
 
 
 if __name__ == "__main__": 		
