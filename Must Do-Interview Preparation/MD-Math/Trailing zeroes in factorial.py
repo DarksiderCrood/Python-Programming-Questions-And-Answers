@@ -28,4 +28,15 @@ Expected Auxiliary Space: O(1)
 Constraints:
 1 <= N <= 109
 '''
+class Solution:
+    def trailingZeroes(self, N):
+    	pass
 
+
+if __name__ == '__main__':
+    t = int(input())
+    for _ in range(t):
+        N = int(input())
+        ob = Solution()
+        ans = ob.trailingZeroes(N)
+        print(ans)
