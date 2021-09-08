@@ -43,8 +43,7 @@ Constraints:
 class Solution:
     def rotateArr(self,A,D,N):
         A.extend(A[:D])
-        A = A[D:]
-        return A
+        del(A[:D])
 
 
 import math
