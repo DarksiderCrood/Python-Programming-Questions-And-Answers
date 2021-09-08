@@ -51,11 +51,11 @@ if __name__ == '__main__':
 # Optimized One
 class Solution:
     def MissingNumber(self,array,n):
+        sums = 0 
+        arr_sum = sum(array)
         for x in range(1, n+1):
-            if x in array:
-                continue
-            else:
-                return x
+            sums+=x
+        return sums-arr_sum
 
 
 if __name__ == '__main__':
