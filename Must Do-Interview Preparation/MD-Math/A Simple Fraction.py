@@ -30,3 +30,20 @@ Expected Space Complexity: O(k)
 Constraints:
 1 ≤ numerator, denominator ≤ 2000
 '''
+
+
+
+
+class Solution:
+	def fractionToDecimal(self, numerator, denominator):
+		pass
+
+
+if __name__ == '__main__':
+	T=int(input())
+	for i in range(T):
+		numerator, denominator = input().split()
+		numerator = int(numerator); denominator = int(denominator)
+		ob = Solution()
+		ans = ob.fractionToDecimal(numerator, denominator)
+		print(ans)
