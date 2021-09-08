@@ -31,9 +31,12 @@ Constraints:
 class Solution:
     def trailingZeroes(self, N):
         y=1
+        c=0
         for x in range(1, N+1):
             y*=x
-        return str(y).count(0)
+        for z in str(y):
+            pass
+        return c
 
 
 if __name__ == '__main__':
