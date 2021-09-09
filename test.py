@@ -1,3 +1,1 @@
-A = "ccad" 
-new = A.replace('c', 'a')
-print(new)
+print ([5>8, 6>3, 3>1]  )  
