@@ -45,7 +45,21 @@ Constraints:
 
 class Solution:
     def chooseandswap (self, A):
-        return A
+        char_in_list = ''.join(set(A))
+        print("Unique chars in a String: ", char_in_list)
+        print("Enter first and second chars")
+        chose_char = list(map(str, input().split()))
+        lt = [y for y in A]
+        first = chose_char[0]
+        second = chose_char[1]
+        print("You Choose '{}' as first char and '{}' as second char".format(first, second))
+        for x in range(0, len(lt)):
+            if lt[x] == first:
+                lt[x] == second
+            else:
+                lt[x] == first
+        return ''.join(lt)
+
 
 
 if __name__ == '__main__': 
@@ -53,5 +67,6 @@ if __name__ == '__main__':
     t = 1 #int (input ())
     for _ in range (t):
         A = "ccad" #input()
+        print("String: ", A)
         ans = ob.chooseandswap(A)
         print(ans)
