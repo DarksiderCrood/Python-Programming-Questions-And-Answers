@@ -45,28 +45,80 @@ Constraints:
 
 class Solution:
     def chooseandswap (self, A):
-        char_in_list = ''.join(set(A))
-        print("Unique chars in a String: ", char_in_list)
-        print("Enter first and second chars")
-        chose_char = list(map(str, input().split()))
-        lt = [y for y in A]
-        first = chose_char[0]
-        second = chose_char[1]
-        print("You Choose '{}' as first char and '{}' as second char".format(first, second))
-        for x in range(0, len(lt)):
-            if lt[x] == first:
-                lt[x] == second
-            else:
-                lt[x] == first
-        return ''.join(lt)
-
+        VAL = 256
+        A_list = [g for g in A]
+        le = len(A_list)
+        i = 0
+        j = 0
+        range_vals=[0 for i in range(VAL)]
+        for i in range(VAL):
+            range_vals[i] = -1
+        for i in range(le):
+            if (range_vals[ord(A_list[i])-97] == -1):
+                range_vals[ord(A_list[i])-97] = i
+        for  i in range(le):
+            status = False
+            for j in range(ord(A_list[i])-97):
+                if (range_vals[j] > range_vals[ord(A[i])-97]):
+                    status = True
+                    break
+            if (status):
+                break
+        if (i < le):
+            char1 = (A_list[i])
+            char2 = chr(j+97)
+            for i in range(le):
+                if (A_list[i] == char1):
+                    A_list[i] = char2
+                elif (A_list[i] == char2):
+                    A_list[i] = char1
+        return "".join(A_list)
 
 
 if __name__ == '__main__': 
     ob = Solution()
-    t = 1 #int (input ())
+    t = int (input ())
     for _ in range (t):
-        A = "ccad" #input()
-        print("String: ", A)
+        A = input()
         ans = ob.chooseandswap(A)
         print(ans)
+
+
+
+# or
+
+
+def smallestStr(str, n):
+	i, j=0,0
+
+	chk=[-1]*26
+
+	for i in range(n):
+		if (chk[ord(str[i])-97] == -1):
+			chk[ord(str[i])-97] = i
+
+	for i in range(n):
+		flag = False
+		for j in range(ord(str[i])-97):
+			if (chk[j] > chk[ord(str[i])-97]):
+				flag = True
+				break
+		if (flag):
+			break
+	if (i < n):
+		ch1 = (str[i])
+		ch2 = chr(j+97)
+		for i in range(n):
+			if (str[i] == ch1):
+				str[i] = ch2
+
+			elif (str[i] == ch2):
+				str[i] = ch1
+
+	return "".join(str)
+
+st = "z" #input()
+str=list(st)
+n = len(str)
+
+print(smallestStr(str, n))
