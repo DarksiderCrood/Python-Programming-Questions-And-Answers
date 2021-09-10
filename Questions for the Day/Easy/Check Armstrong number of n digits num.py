@@ -1,6 +1,7 @@
 # Armstrong number is a number that is equal to the sum of cubes of its digits.
 """
 # Check Armstrong number of n digits
+# Armstrong number is a number that is equal to the sum of cubes of its digits
 num = int(input("Enter the number: "))
 
 # Changed num variable to string,
