@@ -64,7 +64,7 @@ class Solution:
                     break
             if (status):
                 break
-        if (i < le):
+        if (i < le-1):
             char1 = (A_list[i])
             char2 = chr(j+97)
             for i in range(le):
@@ -105,7 +105,7 @@ def smallestStr(str, n):
 				break
 		if (flag):
 			break
-	if (i < n):
+	if (i < n-1):
 		ch1 = (str[i])
 		ch2 = chr(j+97)
 		for i in range(n):
