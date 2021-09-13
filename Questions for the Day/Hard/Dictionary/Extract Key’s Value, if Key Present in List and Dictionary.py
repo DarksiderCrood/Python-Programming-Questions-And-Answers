@@ -15,3 +15,6 @@ test_list = ["Gfg", "is", "Good", "for", "Geeks"]
 test_dict = {"Gfg" : 5, "Best" : 6}
 K = "Gfg"
 
+
+if K in test_list and test_dict:
+    print(test_dict["Gfg"])
