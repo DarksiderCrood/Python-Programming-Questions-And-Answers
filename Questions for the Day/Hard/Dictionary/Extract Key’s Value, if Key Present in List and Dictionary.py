@@ -11,3 +11,7 @@ Output : None
 Explanation : “Gfg” not present in List.
 '''
 
+test_list = ["Gfg", "is", "Good", "for", "Geeks"]
+test_dict = {"Gfg" : 5, "Best" : 6}
+K = "Gfg"
+
