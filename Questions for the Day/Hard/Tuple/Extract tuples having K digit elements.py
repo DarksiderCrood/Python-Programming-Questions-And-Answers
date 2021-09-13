@@ -12,11 +12,7 @@ Explanation : All tuples have numbers with 3 digits.
 
 test_list = [(54, 2), (34, 55), (222, 23), (12, 45), (78, )]
 K = 2
-l = []
-for x in test_list:
-    for j in x:
-        st = str(j)
-        if len(st)==K:
-            l.append(int(st))
 
-print(l)
+test_list = [x for x in test_list if all(len(str(y))==K for y in x)] 
+print(test_list)
+
