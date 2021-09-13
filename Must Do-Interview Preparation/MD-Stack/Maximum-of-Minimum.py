@@ -61,7 +61,9 @@ class Solution:
     
     #Function to find maximum of minimums of every window size.
     def maxOfMin(self,arr,n):
-        return arr
+        a=[10,20,40,30]
+        l=sorted(a, reverse=True)
+        return l
 
 #{ 
 #  Driver Code Starts
