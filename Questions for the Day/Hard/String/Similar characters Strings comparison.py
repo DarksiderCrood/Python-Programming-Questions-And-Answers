@@ -10,12 +10,9 @@ Output : False
 Explanation : g missing in 1st String.
 '''
 
-from typing_extensions import TypeGuard
-
 
 test_str1 = 'e!e!k!s!g'
 test_str2 = 'g!e!e!k!s'
 delim = '!'
-test_str1 = sorted(test_str1.split('!'),reverse=True)
-test_str2 = sorted(test_str2.split('!'),reverse=True)
-print(test_str1, test_str2)
+print(''.join(sorted(test_str1.split('!'),reverse=True)) == 
+        ''.join(sorted(test_str2.split('!'),reverse=True)))
