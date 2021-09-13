@@ -11,10 +11,12 @@ Output : None
 Explanation : “Gfg” not present in List.
 '''
 
-test_list = ["Gfg", "is", "Good", "for", "Geeks"]
+test_list = ["is", "Good", "for", "Geeks"]
 test_dict = {"Gfg" : 5, "Best" : 6}
 K = "Gfg"
 
 
 if K in test_list and test_dict:
     print(test_dict["Gfg"])
+else:
+    print(None)
