@@ -42,7 +42,7 @@ of size 1 are {10} , {20} , {30}.
 Maximum of these minimums are 30 and
 similarly other outputs can be computed
 Your Task:
-The task is to complete the function maxOfMin() which takes the array arr[] 
+The task is to complete the function MoMoW() which takes the array arr[] 
 and its size N as inputs and finds the maximum of minimum of every window size 
 and returns an array containing the result. 
 
@@ -60,10 +60,19 @@ Constraints:
 class Solution:
     
     #Function to find maximum of minimums of every window size.
-    def maxOfMin(self,arr,n):
-        a=[10,20,40,30]
-        l=sorted(a, reverse=True)
-        return l
+    def MoMoW(self,arr,n):
+        MAX = -1000000
+        for x in range(1, n + 1):
+            MoMoW = MAX
+            for i in range(n - x + 1):
+                m = arr[i]
+                for j in range(x):
+                    if (arr[i + j] < m):
+                        m = arr[i + j]
+                if (m > MoMoW):
+                    MoMoW = m
+            return MoMoW
+
 
 #{ 
 #  Driver Code Starts
@@ -91,9 +100,10 @@ if __name__ == '__main__':
         n = int(input())
         a = list(map(int,input().strip().split()))
         ob=Solution()
-        res = ob.maxOfMin(a,n)
+        res = ob.MoMoW(a,n)
         for i in range (len (res)):
             print (res[i], end = " ")
         print ()
 
 # } Driver Code Ends
+
