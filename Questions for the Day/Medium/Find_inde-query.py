@@ -17,4 +17,28 @@ You are not required to explicitly print the expected
 output, just return it and printing has
 already been taken care of.
 '''
+def solution(arr, q) :
+    
+    start = 0
+    end = len(arr) - 1
+    while(start <= end) :
 
+        mid = start + (end - start) // 2
+        
+        if(arr[mid] == q) :
+            return mid
+        
+        elif(arr[mid] >= arr[start]) :
+
+            if(arr[start] <= q and q <= arr[mid]):
+                end = mid - 1
+            else :
+                start = mid + 1
+            
+        else :
+            if(arr[end] >= q and q >= arr[mid]) :
+                start = mid + 1
+            else :
+                end = mid - 1
+
+    return -1
