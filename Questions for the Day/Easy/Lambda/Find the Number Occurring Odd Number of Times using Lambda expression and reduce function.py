@@ -11,7 +11,6 @@ Output :  3
 '''
 
 test_list = [1, 2, 3, 2, 3, 1, 3]
-
 occure = list(map(lambda x:str(x) if test_list.count(x)%2!=0 else "", test_list))
 print(set(''.join(occure)))
 
@@ -22,3 +21,14 @@ for x in test_list:
     if test_list.count(x)%2!=0:
         even_num_occure.append(x)
 print(set(even_num_occure))
+
+
+# Geeks for Geeks Answer
+from functools import reduce
+
+def oddTimes(input):
+	print (reduce(lambda a, b: a ^ b, input))
+
+if __name__ == "__main__":
+	input = [1, 2, 3, 2, 3, 1, 3]
+	oddTimes(input)
