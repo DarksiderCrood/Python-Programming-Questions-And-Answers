@@ -12,8 +12,13 @@ Output :  3
 
 test_list = [1, 2, 3, 2, 3, 1, 3]
 
-occure = list(map(lambda x:test_list.count(x)!=0, test_list))
-print(occure)
+occure = list(map(lambda x:str(x) if test_list.count(x)%2!=0 else "", test_list))
+print(set(''.join(occure)))
 
+# Without lambda
+test_list = [1, 2, 3, 2, 3, 1, 3]
+even_num_occure = []
 for x in test_list:
-    print(test_list.count(x))
+    if test_list.count(x)%2!=0:
+        even_num_occure.append(x)
+print(set(even_num_occure))
