@@ -68,7 +68,7 @@ if __name__ == '__main__':
 
 # Without Class
 array1 = [2]
-array2 = [4,1,2]
+array2 = [4]
 
 new_arr = sorted(array1 + array2)
 l = len(new_arr)
