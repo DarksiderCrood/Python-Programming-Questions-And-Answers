@@ -1,9 +1,14 @@
 
-N = 5
-mul = 1
 
-if N == 0:
-    print(0)
-else:
-    for x in range(1, N+1):
-        print(x)
+ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
+n = 9
+count = 0
+while sorted(ar):
+    b=ar.pop(0)
+    a=ar.pop(0)
+    if a==b:
+        print([a,b])
+        count+=1
+    else:
+        print([a,b])
+print(count)
