@@ -2,7 +2,7 @@
 def A_Subs(A):
     # code here
     count = 1
-    while True:
+    while len(A)<len(B):
         if B in A:
             return count
             break
@@ -14,19 +14,19 @@ def A_Subs(A):
 # Other Approach
 '''
     def repeatedStringMatch(self, A, B):
-        num=A
-        if A.count(B)>0:
+        num = A
+        if B in A:
             return 1
         else:
-            count=1
+            count = 1
             while( len(A)<len(B)):
-                A+=num
-                count+=1
-            if A.count(B)>0:
+                A += num
+                count += 1
+            if B in A:
                 return count
-            A+=num
-            count+=1
-            if A.count(B)>0:
+            A += num
+            count += 1
+            if B in A:
                 return count
         return -1
 '''

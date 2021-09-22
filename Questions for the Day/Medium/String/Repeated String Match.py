@@ -31,12 +31,21 @@ from itertools import combinations
 
 # Find Subs of A
 def A_Subs(A):
-    subs = []
-    for x in range(0, len(A)+1):
-        temp = [list(x) for x in combinations(A, x)]
-        if len(temp) > 0:
-            subs.extend(temp)
-    return subs
+    num = A
+    if B in A:
+        return 1
+    else:
+        count = 1
+        while( len(A)<len(B)):
+            A += num
+            count += 1
+        if B in A:
+            return count
+        A += num
+        count += 1
+        if B in A:
+            return count
+    return -1
 
 
 # Main
