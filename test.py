@@ -44,7 +44,18 @@ if __name__ == '__main__':
     # Inputs
     A = "abcd"
     B = "cdabcdab"
-    result = A_Subs(A)
+
+    count = 1
+    while True:
+        if B in A:
+            print(count)
+        else:
+            count+=1
+            result = A_Subs(A)
+            A = A+A
+            
+
+
 
 
 
