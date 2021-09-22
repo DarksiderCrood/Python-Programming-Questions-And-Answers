@@ -34,9 +34,9 @@ B = "cdabcdab"
 
 subs = []
 for x in range(0, len(A)+1):
-    temp = [list(x) for x in combinations(A)]
-    if temp >0:
-        subs.append(temp)
+    temp = [list(x) for x in combinations(A, x)]
+    if len(temp) > 0:
+        subs.extend(temp)
 print(subs)
 
 
