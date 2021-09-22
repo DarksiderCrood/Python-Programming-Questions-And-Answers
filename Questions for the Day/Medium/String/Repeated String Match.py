@@ -53,13 +53,5 @@ if __name__ == '__main__':
     # Inputs
     A = "abcd"
     B = "cdabcdab"
-
-    count = 1
-    while True:
-        if B in A:
-            print(count)
-            break
-        else:
-            count+=1
-            # result = A_Subs(A)
-            A = A+A
+    result = A_Subs(A)
+    print(result)
