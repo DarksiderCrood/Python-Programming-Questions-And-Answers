@@ -26,10 +26,6 @@ Constraints:
 1 ≤ |A|, |B| ≤ 103
 '''
 
-from itertools import combinations
-
-
-# Find Subs of A
 def A_Subs(A):
     num = A
     if B in A:
