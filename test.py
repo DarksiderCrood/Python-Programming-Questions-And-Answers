@@ -29,14 +29,22 @@ Constraints:
 from itertools import combinations
 
 
-A = "abcd"
-B = "cdabcdab"
+# Find Subs of A
+def A_Subs(A):
+    subs = []
+    for x in range(0, len(A)+1):
+        temp = [list(x) for x in combinations(A, x)]
+        if len(temp) > 0:
+            subs.extend(temp)
+    return subs
 
-subs = []
-for x in range(0, len(A)+1):
-    temp = [list(x) for x in combinations(A, x)]
-    if len(temp) > 0:
-        subs.extend(temp)
-print(subs)
+
+# Main
+if __name__ == '__main__':
+    # Inputs
+    A = "abcd"
+    B = "cdabcdab"
+    result = A_Subs(A)
+
 
 
