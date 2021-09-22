@@ -42,13 +42,14 @@ def A_Subs(A):
 # Main
 if __name__ == '__main__':
     # Inputs
-    A = "abcd"
-    B = "cdabcdab"
+    A = "aa"
+    B = "a"
 
     count = 1
     while True:
         if B in A:
             print(count)
+            break
         else:
             count+=1
             result = A_Subs(A)
