@@ -17,4 +17,4 @@ else:
         print(time_split[0]+":"+time_split[1]+":"+time_split[2].replace('AM',''))
     else:
         hr = int(time_split[0])-12
-        print(str(hr)+":"+time_split[1]+":"+time_split[2].replace('AM',''))
+        print("0"+str(hr)+":"+time_split[1]+":"+time_split[2].replace('AM',''))
