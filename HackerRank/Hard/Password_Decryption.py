@@ -42,10 +42,13 @@ Explanation:
     it can't be swapped with the next character. Thus, ap1pL5e becomes 51 PakOLp*oe when encrypted.
 '''
 
-
+''' SAMPLE '''
 # Output: hAck3rr4nk Input: 43Ah*ck0rr0nk
 # Output: poTaTO Input: pTo*Ta*O
-s = "poTaTO" # Output: aP1pL5e Input: 51Pa*0Lp*0e
+# Output: aP1pL5e Input: 51Pa*0Lp*0e
+
+# Program in Reverse (Encrypt String)
+s = "poTaTO" 
 l = [x for x in s]
 pos = []
 ad = []
