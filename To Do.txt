@@ -4,6 +4,7 @@ Print-BST-Elements-In-Givin-Range.py
 Odd-Number-Of-Factors
 Python-Programming-Questions-And-Answers\Must Do-Interview Preparation\MD-Greedy\Choose and Swap.py
 Satify-List-Ele-Condition
+Check Tree Traversal
 
 Complete all Questions
 https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/
