@@ -16,10 +16,10 @@ maxz = max([len(k) for k in sunze])
 print(maxz)
 
 # If output is largest sub array with sum 0
-'''temp = 0
+temp = 0
 for j in sunze:
     if len(j) > temp:
         c = j
         temp = len(j)
-print(c)'''
+print(c)
 
