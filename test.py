@@ -1,43 +1,22 @@
-# Find Subs of A
-def A_Subs(A):
-    # code here
-    count = 1
-    while len(A)<len(B):
-        if B in A:
-            return count
-            break
-        else:
-            count+=1
-            A = A+A
-    return -1
-
-# Other Approach
-'''
-    def repeatedStringMatch(self, A, B):
-        num = A
-        if B in A:
-            return 1
-        else:
-            count = 1
-            while( len(A)<len(B)):
-                A += num
-                count += 1
-            if B in A:
-                return count
-            A += num
-            count += 1
-            if B in A:
-                return count
-        return -1
-'''
+from itertools import islice
 
 
-# Main
-if __name__ == '__main__':
-    # Inputs
-    A = "abcd"
-    B = "cdabcdab"
-    result = A_Subs(A)
-    print(result)
+s = "poTaTO" # pTo*Ta*O
+l = [x for x in s]
+lines = list(s)
+lit = iter(enumerate(lines))
+pos = []
+ad = []
 
+for x in range(0, len(l)):
+    if x < len(l)-1:
+        if l[x].islower() and l[x+1].isupper():
+            l[x], l[x+1] = l[x+1], l[x]
+            pos.append(x+1+1)
+            next(islice(l, 2), None)
 
+pos_inc = 0
+for i in pos:
+    l.insert(i+pos_inc, '*')
+    pos_inc+=1
+print(''.join(l))
