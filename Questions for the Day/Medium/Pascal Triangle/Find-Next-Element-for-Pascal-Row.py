@@ -4,6 +4,7 @@ def pascal_triangle(arr, n):
    arrstr = ''.join(str(k) for k in arr)
    iarrl = len(arr)
    for _ in range(max(n,0)):
+      print(row) # print pascal triangle till nth rows
       rowstr = ''.join(str(k) for k in row)
       if arrstr in rowstr:
           print(row[iarrl])
