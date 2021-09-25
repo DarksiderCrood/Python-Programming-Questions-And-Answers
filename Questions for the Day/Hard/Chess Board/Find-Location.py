@@ -17,3 +17,12 @@ Examples:
     Input: "(2 2) (3 3)" 
     Output: 2
 '''
+
+
+def Quickknight(loc):
+    pass
+
+
+if __name__ == '__main__':
+    location = '(1 1) (8 8)'
+    Quickknight(location)
