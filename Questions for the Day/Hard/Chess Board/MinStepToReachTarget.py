@@ -18,8 +18,7 @@ Examples:
     Output: 2
 '''
 
-# This code is from GeeksFrorGeeks and 
-# This code is contributed by
+# This code is from GeeksFrorGeeks and This code is contributed by
 # Kaustav kumar Chanda
 # Ref: https://www.geeksforgeeks.org/minimum-steps-reach-target-knight/
 
