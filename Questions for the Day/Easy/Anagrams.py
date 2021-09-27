@@ -22,10 +22,7 @@ in txt.
 
 #User function Template for python3
 class Solution:
-
-	
-	def search(self,pat, txt):
-	    # code here
+    def search(self,pat, txt):
         n, m, ans = len(txt), len(pat), 0
         ar, br = [0]*26, [0]*26
 
