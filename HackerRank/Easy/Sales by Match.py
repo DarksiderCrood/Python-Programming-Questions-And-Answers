@@ -26,7 +26,7 @@ if __name__ == '__main__':
     fptr.close()
 
 
-# Raw Code
+# Raw Code 
 ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
 n = 9
 dc = {x:ar.count(x) for x in ar}
@@ -38,4 +38,5 @@ for x,y in dc.items():
         count+=mod
     else:
         count+=y
+print(count/2)
 print(int(count/2))
