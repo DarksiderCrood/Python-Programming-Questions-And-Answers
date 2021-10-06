@@ -36,5 +36,3 @@ Expected Auxilliary Space  : O(k)
 Constraints:
 1 <= K,N <= 500
 1 <= a[ i ] <= 105'''
-
-
