@@ -8,6 +8,10 @@ else:
     for x,y in zip(s,t):
         if x==y:
             continue
+        elif y != x:
+            count+=1
+            inx = s.index(x)
+            s[inx] = y
         elif y not in s:
             count+=1
             inx = s.index(x)
