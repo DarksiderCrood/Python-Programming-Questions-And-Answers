@@ -6,6 +6,7 @@ Python-Programming-Questions-And-Answers\Must Do-Interview Preparation\MD-Greedy
 Satify-List-Ele-Condition
 Check Tree Traversal
 Password_Decryption
+Smallest range in K lists
 
 Complete all Questions
 https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/
