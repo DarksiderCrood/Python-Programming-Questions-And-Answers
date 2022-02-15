@@ -36,6 +36,19 @@ def remAnagram(str1,str2):
         if count == len(str2):
             return len(str1) - count
 
+
+    # Another Answer
+    """
+        j = 0
+        t = len(str1)+len(str2)
+        for i in str1 :
+        j += min(str1.count(i),str2.count(i))
+        str1=str1.replace(i,"")
+        str2=str2.replace(i,"")
+        
+        return (t -2*j)
+    """
+
 #{ 
 #  Driver Code Starts
 if __name__=='__main__':
