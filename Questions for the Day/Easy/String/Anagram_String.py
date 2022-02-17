@@ -49,10 +49,8 @@ def remAnagram(str1,str2):
         return (t -2*j)
     """
 
-#{ 
 #  Driver Code Starts
 if __name__=='__main__':
     str1 = 'basgadhbfgvhads'
     str2 = 'sjdhgvbjdsbhvbvd'
     print(remAnagram(str1,str2))
-# } Driver Code Ends
