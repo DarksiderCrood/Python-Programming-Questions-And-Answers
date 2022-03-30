@@ -7,7 +7,7 @@ async def main():
     player = await client.get_player("tag")
     print("{0.name} has {0.trophies} trophies!".format(player))
 
-    clans = await client.search_clans(name="Best Clan Ever", limit=5)
+    clans = await client.search_clans(name="I am Crood", limit=5)
     for clan in clans:
         print("{0.name} ({0.tag}) has {0.member_count} members".format(clan))
 
