@@ -58,7 +58,7 @@ Constraints:
 
 class Solution:
     def fractionToDecimal(self, numerator, denominator):
-        pass
+        return numerator/denominator
 
 
 if __name__ == '__main__':
